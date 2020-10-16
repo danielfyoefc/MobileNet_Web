@@ -1,0 +1,60 @@
+﻿    @{
+        Layout = null;
+    }
+    <h2>Company</h2>
+    <p>
+        <a href="#/Company/Create">Create New</a>
+    </p>
+    <table  id="datatable" class="table table-striped jambo_table bulk_action">
+        <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                TerminalId
+            </th>
+            <th>
+                Address
+            </th>
+            <th>
+                PhoneNumber
+            </th>
+            <th>
+                MobileNumber
+            </th>
+            <th>
+                CompanyType
+            </th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in data">
+            <td>
+                {{ item.Name }}
+            </td>
+            <td>
+                {{ item.TerminalId }}
+            </td>
+            <td>
+                {{ item.Address }}
+            </td>
+            <td>
+                {{ item.PhoneNumber }}
+            </td>
+            <td>
+                {{ item.MobileNumber }}
+            </td>
+            <td>
+                {{ item.CompanyType }}
+            </td>
+            <td>
+                <a ng-href="#/Company/Edit/{{item.CompanyId}}">Edit</a> |
+                <a ng-href="#/Company/{{item.CompanyId}}">Details</a> |
+                <a ng-href="#/Company/Delete/{{item.CompanyId}}">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    
+    </table>
